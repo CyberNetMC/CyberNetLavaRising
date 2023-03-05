@@ -20,7 +20,7 @@ public class Uptime extends SubCommand {
 
     @Override
     public void perform(CommandSender sender, String[] args, Command command) {
-        String uptime = "&6The server has been online for &a" + Time.getBetterTimeFromLongs(Time.getUnix(), Main.unixStarted, false) + "&6!";
+        String uptime = "???";
         if(args.length > 1) {
             if(args[1].equals("seconds")) {
                 sender.sendMessage(UChat.chat("&6The server has been online for &a" + NumberUtils.formatLong(Time.getUnix()- Main.unixStarted) + " &aseconds&6!"));

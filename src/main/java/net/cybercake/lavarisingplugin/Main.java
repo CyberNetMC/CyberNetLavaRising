@@ -25,6 +25,8 @@ import java.util.ArrayList;
 
 public final class Main extends Spigot {
 
+    public static Main instance;
+
     public static final boolean useCommodore = true;
     public static boolean disabled = false;
     public static int disabledUntilRestart = -1;
@@ -38,9 +40,11 @@ public final class Main extends Spigot {
     public static ArrayList<Material> blacklistedItems = new ArrayList<>();
     public static ArrayList<Material> instaBreak = new ArrayList<>();
 
+    public static Main get() { return instance; }
+
     @Override
     public void onEnable() {
-
+        instance = this;
         long ms = System.currentTimeMillis();
         CyberAPI.initSpigot(this, true);
         State.set(State.Game.SERVER_STARTING);

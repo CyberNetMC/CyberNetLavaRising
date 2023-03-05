@@ -101,7 +101,7 @@ public class StartSequence {
         MainTask.lavaRiseNext = Time.getUnix()+15;
         MainTask.currentLevel = -64;
         PlayerPVP.pvpEnabled = false;
-        bossBar = Bukkit.createBossBar(new NamespacedKey(Spigot.get(), "lavarising"), UChat.chat("&8Loading..."), BarColor.RED, BarStyle.SOLID);
+        bossBar = Bukkit.createBossBar(new NamespacedKey(Main.get(), "lavarising"), UChat.chat("&8Loading..."), BarColor.RED, BarStyle.SOLID);
         bossBar.setVisible(true);
         bossBar.setProgress(1.0);
         Bukkit.getOnlinePlayers().forEach(player -> bossBar.addPlayer(player));
