@@ -1,0 +1,8 @@
+start {
+  takecontrol;
+  cancel;
+  confirm;
+  settime {
+    time brigadier:integer 1 1000;
+  }
+}

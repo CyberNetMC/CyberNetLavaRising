@@ -1,0 +1,18 @@
+lava {
+  setlevel {
+    yLevel brigadier:integer -64 319;
+  }
+  settimestatic {
+    timeBetweenRise brigadier:integer 0 9999;
+  }
+  settimeuntil {
+    timeUntilNextRise brigadier:integer 0 9999;
+  }
+  pause {
+    everybody;
+  }
+  listtasks;
+  canceltask {
+    taskID brigadier:integer;
+  }
+}

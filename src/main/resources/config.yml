@@ -1,0 +1,31 @@
+ip: "mc.cybercake.net"
+worldBorder: 101.0
+minToStart: 3
+difficulty: HARD
+absorptionAmount: 1
+totalGameTime: 3600 # seconds
+timeTillStartOnceFilled: 60
+deaths: [death.attack.lava, death.attack.inFire, death.attack.onFire]
+pvp:
+  yLevelEnables: 60
+world:
+  type: NORMAL
+  seed: 0
+  environment: NORMAL
+startingItems:
+  oakLogs:
+    material: OAK_LOG
+    amount: 8
+  cobblestone:
+    material: COBBLESTONE
+    amount: 16
+  beef:
+    material: BEEF
+    amount: 16
+removedBlocks:
+  - "/replace gravel 40%gravel,60%stone"
+  - "/replace sand 40%sand,60%sandstone"
+  - "/replace water,kelp,kelp_plant,seagrass,tall_seagrass,glow_lichen[waterlogged=true],pointed_dripstone[waterlogged=true] cyan_stained_glass,
+  blue_stained_glass"
+instabreak: ["CYAN_STAINED_GLASS", "BLUE_STAINED_GLASS"]
+blacklistedPlaceBlocks: ['WATER_BUCKET', 'BEDROCK', 'WATER', 'any:BUCKET']

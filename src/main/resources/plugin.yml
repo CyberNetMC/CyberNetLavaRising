@@ -1,0 +1,40 @@
+name: CyberNetLavaRising
+version: '0.1.0'
+main: net.cybercake.lavarisingplugin.Main
+api-version: 1.18
+prefix: LavaRising
+authors: [ CyberNetTeam ]
+description: The main Lava Rising plugin for lava rising on CyberNet!
+website: https://twitter.com/trueCyberCake
+depend: [PlaceholderAPI, LuckPerms]
+
+commands:
+  cybernetlavarising:
+    description: No description
+    usage: An error occurred!
+    aliases: [ cnlr ]
+  worlds:
+    description: No description
+    usage: An error occurred!
+    permission: worlds.*
+    permission-message: §cYou don't have permission to use this!
+    aliases: [world, w]
+
+  getstate:
+    description: No description
+    usage: An error occurred!
+  start:
+    description: No description
+    usage: An error occurred!
+    permission: admin.lavarising.start
+  seed:
+    description: No description
+    usage: An error occurred!
+  lava:
+    description: No description
+    usage: An error occurred!
+    permission: admin.lavarising.lavacontrol
+  pvp:
+    description: No description
+    usage: An error occurred!
+    permission-message: admin.lavarising.pvpcontrol

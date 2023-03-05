@@ -1,0 +1,7 @@
+pvp {
+  when;
+  toggle;
+  setenables {
+    yLevel brigadier:integer -64 319;
+  }
+}

@@ -1,0 +1,215 @@
+worlds {
+  help;
+  list {
+    world brigadier:string single_word;
+  }
+  tp {
+    world brigadier:string single_word {
+      player brigadier:string single_word;
+    }
+  }
+  load {
+    world brigadier:string single_word {
+      amplified;
+      default;
+      flat;
+      largebiomes;
+    }
+  }
+  delete {
+    world brigadier:string single_word;
+  }
+  gamerule {
+    announceAdvancements {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    commandBlockOutput {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    disableElytraMovementCheck {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    disableRaids {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    doDaylightCycle {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    doEntityDrops {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    doFireTick {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    doImmediateRespawn {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    doInsomnia {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    doLimitedCrafting {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    doMobLoot {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    doMobSpawning {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    doPatrolSpawning {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    doTileDrops {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    doTraderSpawning {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    doWeatherCycle {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    drowningDamage {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    fallDamage {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    fireDamage {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    forgiveDeadPlayers {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    freezeDamage {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    keepInventory {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    logAdminCommands {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    maxCommandChainLength {
+      value brigadier:integer {
+        world brigadier:string single_word;
+      }
+    }
+    maxEntityCramming {
+      value brigadier:integer {
+        world brigadier:string single_word;
+      }
+    }
+    mobGriefing {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    naturalRegeneration {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    playersSleepingPercentage {
+      value brigadier:integer {
+        world brigadier:string single_word;
+      }
+    }
+    randomTickSpeed {
+      value brigadier:integer {
+        world brigadier:string single_word;
+      }
+    }
+    reducedDebugInfo {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    sendCommandFeedback {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    showDeathMessages {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    spawnRadius {
+      value brigadier:integer {
+        world brigadier:string single_word;
+      }
+    }
+    spectatorsGenerateChunks {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+    universalAnger {
+      value brigadier:bool {
+        world brigadier:string single_word;
+      }
+    }
+  }
+  unload {
+    world brigadier:string single_word;
+  }
+  setspawn {
+    x brigadier:double -30000000 30000000{
+      y brigadier:double 0 255 {
+        z brigadier:double -30000000 30000000 {
+          yaw brigadier:float -180 180 {
+            pitch brigadier:float -90 90 {
+              world brigadier:string single_word;
+            }
+          }
+        }
+      }
+    }
+  }
+}

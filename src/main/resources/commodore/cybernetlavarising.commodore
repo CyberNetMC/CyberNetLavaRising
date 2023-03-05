@@ -1,0 +1,10 @@
+cybernetlavarising {
+  help;
+  reload;
+  uptime {
+    seconds;
+    minutes;
+    hours;
+    days;
+  }
+}

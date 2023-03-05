@@ -1,0 +1,56 @@
+plugins {
+    id 'java'
+}
+
+group = 'net.cybercake.lavarisingplugin'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+    maven { url = uri("https://repo.purpurmc.org/snapshots") }
+    maven {
+        name = 'sonatype'
+        url = 'https://oss.sonatype.org/content/groups/public/'
+    }
+    maven {
+        url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/'
+    }
+}
+
+dependencies {
+    compileOnly 'org.purpurmc.purpur:purpur-api:1.18.1-R0.1-SNAPSHOT'
+    compileOnly 'net.luckperms:api:5.3'
+    compileOnly 'me.clip:placeholderapi:2.11.1'
+    compileOnly 'com.h2database:h2:1.4.200'
+
+    implementation 'org.jetbrains:annotations:22.0.0'
+    implementation 'me.lucko:commodore:1.11'
+    implementation 'fr.mrmicky:fastboard:1.2.1'
+
+    testImplementation 'com.h2database:h2:1.4.200'
+}
+
+def targetJavaVersion = 17
+java {
+    def javaVersion = JavaVersion.toVersion(targetJavaVersion)
+    sourceCompatibility = javaVersion
+    targetCompatibility = javaVersion
+    if (JavaVersion.current() < javaVersion) {
+        toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
+        options.release = targetJavaVersion
+    }
+}
+
+processResources {
+    def props = [version: version]
+    inputs.properties props
+    filteringCharset 'UTF-8'
+    filesMatching('plugin.yml') {
+        expand props
+    }
+}
